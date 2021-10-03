@@ -1,24 +1,290 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatchTheKennyGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kenny" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-Jf-UTY">
+                                <rect key="frame" x="289.5" y="52" width="100" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="qw6-7D-T4O"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIq-PE-zEB">
+                                <rect key="frame" x="174.5" y="70" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A9X-aE-bwp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJp-Lc-HJ7">
+                                <rect key="frame" x="170" y="145" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DTA-g6-mW3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es0-DS-SGE">
+                                <rect key="frame" x="37" y="114" width="50" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PaQ-SX-V7D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpK-e6-IDD">
+                                <rect key="frame" x="146.5" y="782" width="121.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="god-aw-pkC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-vp-SUW">
+                                <rect key="frame" x="40" y="215" width="334" height="527"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VSK-KC-gCI">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="162.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfW-r1-Wj6">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOW-z2-pjR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nhp-Fr-xFZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="wOW-z2-pjR" firstAttribute="leading" secondItem="yfW-r1-Wj6" secondAttribute="leading" id="Dhm-bt-QtT"/>
+                                                    <constraint firstItem="wOW-z2-pjR" firstAttribute="top" secondItem="yfW-r1-Wj6" secondAttribute="top" id="JBt-pa-ZEb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wOW-z2-pjR" secondAttribute="trailing" id="fkg-MQ-Aep"/>
+                                                    <constraint firstAttribute="bottom" secondItem="wOW-z2-pjR" secondAttribute="bottom" id="sC8-Mj-j4I"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iST-KT-Oe1">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkP-5H-7FP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l9g-KY-nPu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="IkP-5H-7FP" secondAttribute="bottom" id="4Xa-tF-Wd2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IkP-5H-7FP" secondAttribute="trailing" id="FJc-kY-ruV"/>
+                                                    <constraint firstItem="IkP-5H-7FP" firstAttribute="top" secondItem="iST-KT-Oe1" secondAttribute="top" id="XdF-GL-2jx"/>
+                                                    <constraint firstItem="IkP-5H-7FP" firstAttribute="leading" secondItem="iST-KT-Oe1" secondAttribute="leading" id="gxQ-KS-Pl3"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o87-fX-Zcf">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-xJ-RFb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bar-dz-Nxo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="E2t-xJ-RFb" secondAttribute="bottom" id="XPj-bj-3gN"/>
+                                                    <constraint firstItem="E2t-xJ-RFb" firstAttribute="leading" secondItem="o87-fX-Zcf" secondAttribute="leading" id="mfR-vR-kFC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="E2t-xJ-RFb" secondAttribute="trailing" id="oou-fL-PSp"/>
+                                                    <constraint firstItem="E2t-xJ-RFb" firstAttribute="top" secondItem="o87-fX-Zcf" secondAttribute="top" id="xdN-60-YCZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GA7-8n-6Ec">
+                                        <rect key="frame" x="0.0" y="182.5" width="334" height="162"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="194-2b-OQC">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="162"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-4Q-Nzf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgF-S9-CHB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ycs-4Q-Nzf" firstAttribute="top" secondItem="194-2b-OQC" secondAttribute="top" id="E0g-kS-WTT"/>
+                                                    <constraint firstItem="Ycs-4Q-Nzf" firstAttribute="leading" secondItem="194-2b-OQC" secondAttribute="leading" id="IOs-Et-O9j"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ycs-4Q-Nzf" secondAttribute="trailing" id="qKp-IA-mh4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ycs-4Q-Nzf" secondAttribute="bottom" id="wH0-L0-OAf"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9R-Bl-61q">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="162"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbk-fj-fnY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vol-mp-W7D"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Cbk-fj-fnY" firstAttribute="leading" secondItem="v9R-Bl-61q" secondAttribute="leading" id="9I3-7N-iMG"/>
+                                                    <constraint firstItem="Cbk-fj-fnY" firstAttribute="top" secondItem="v9R-Bl-61q" secondAttribute="top" id="AmQ-4t-jpb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Cbk-fj-fnY" secondAttribute="trailing" id="Hke-TU-7xa"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Cbk-fj-fnY" secondAttribute="bottom" id="Ra4-6N-CuJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkm-83-P70">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="162"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0T-yX-lsM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdQ-v7-ovw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="l0T-yX-lsM" secondAttribute="bottom" id="66F-Cw-PYT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="l0T-yX-lsM" secondAttribute="trailing" id="juW-8a-w4u"/>
+                                                    <constraint firstItem="l0T-yX-lsM" firstAttribute="top" secondItem="Zkm-83-P70" secondAttribute="top" id="rhi-OU-ErG"/>
+                                                    <constraint firstItem="l0T-yX-lsM" firstAttribute="leading" secondItem="Zkm-83-P70" secondAttribute="leading" id="yFZ-4Y-X1h"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-Lu-XH1">
+                                        <rect key="frame" x="0.0" y="364.5" width="334" height="162.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5N-yk-LZS">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeu-Rj-ecQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6x-Wv-5F3"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="eeu-Rj-ecQ" secondAttribute="bottom" id="S1N-Ut-Yr0"/>
+                                                    <constraint firstItem="eeu-Rj-ecQ" firstAttribute="leading" secondItem="c5N-yk-LZS" secondAttribute="leading" id="c3C-46-l0i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eeu-Rj-ecQ" secondAttribute="trailing" id="oPp-3s-toH"/>
+                                                    <constraint firstItem="eeu-Rj-ecQ" firstAttribute="top" secondItem="c5N-yk-LZS" secondAttribute="top" id="xYx-Nn-ky4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKD-7d-Hhl">
+                                                <rect key="frame" x="118" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OC2-vM-XLK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="645-Te-luj"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="OC2-vM-XLK" firstAttribute="top" secondItem="gKD-7d-Hhl" secondAttribute="top" id="Elm-it-9Q4"/>
+                                                    <constraint firstItem="OC2-vM-XLK" firstAttribute="leading" secondItem="gKD-7d-Hhl" secondAttribute="leading" id="GLu-qI-4Dn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OC2-vM-XLK" secondAttribute="trailing" id="ZxT-Aq-kIG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="OC2-vM-XLK" secondAttribute="bottom" id="bja-wr-wki"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-Oe-Mdd">
+                                                <rect key="frame" x="236" y="0.0" width="98" height="162.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAL-VI-eoh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="98" height="162.5"/>
+                                                        <state key="normal" title="Button" image="Kenny"/>
+                                                        <connections>
+                                                            <action selector="kennySelectedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pag-BD-lPp"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="jAL-VI-eoh" secondAttribute="trailing" id="Fms-2s-Aao"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jAL-VI-eoh" secondAttribute="bottom" id="LN2-Jv-U4v"/>
+                                                    <constraint firstItem="jAL-VI-eoh" firstAttribute="leading" secondItem="F0k-Oe-Mdd" secondAttribute="leading" id="U11-HV-4Vo"/>
+                                                    <constraint firstItem="jAL-VI-eoh" firstAttribute="top" secondItem="F0k-Oe-Mdd" secondAttribute="top" id="ufQ-Iz-4pG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIN-vp-SUW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0Hz-fd-awq"/>
+                            <constraint firstItem="kpK-e6-IDD" firstAttribute="top" secondItem="YIN-vp-SUW" secondAttribute="bottom" constant="40" id="BNq-6z-NDY"/>
+                            <constraint firstItem="dJp-Lc-HJ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BsM-O3-zkz"/>
+                            <constraint firstItem="YIN-vp-SUW" firstAttribute="top" secondItem="dJp-Lc-HJ7" secondAttribute="bottom" constant="40" id="N8i-lf-4je"/>
+                            <constraint firstItem="Es0-DS-SGE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="Pgm-gw-rjs"/>
+                            <constraint firstItem="dJp-Lc-HJ7" firstAttribute="top" secondItem="RIq-PE-zEB" secondAttribute="bottom" constant="45" id="TCD-8o-Pio"/>
+                            <constraint firstItem="Es0-DS-SGE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="TEW-68-nzd"/>
+                            <constraint firstItem="RIq-PE-zEB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W17-dx-Ivg"/>
+                            <constraint firstItem="ho9-Jf-UTY" firstAttribute="leading" secondItem="RIq-PE-zEB" secondAttribute="trailing" constant="50" id="XnS-fR-NeF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kpK-e6-IDD" secondAttribute="bottom" constant="40" id="bBl-r4-g7J"/>
+                            <constraint firstItem="kpK-e6-IDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRY-Fd-ydN"/>
+                            <constraint firstItem="ho9-Jf-UTY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="id5-Vi-fPc"/>
+                            <constraint firstItem="RIq-PE-zEB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="q8j-n0-6Av"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YIN-vp-SUW" secondAttribute="trailing" constant="40" id="qxK-vG-83i"/>
+                            <constraint firstItem="dJp-Lc-HJ7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Es0-DS-SGE" secondAttribute="trailing" constant="8" symbolic="YES" id="u5c-2X-nCl"/>
+                            <constraint firstItem="ho9-Jf-UTY" firstAttribute="bottom" secondItem="dJp-Lc-HJ7" secondAttribute="bottom" id="wu3-QM-Kaj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="dJp-Lc-HJ7" id="oDC-CF-fgv"/>
+                        <outlet property="startButton" destination="Es0-DS-SGE" id="KYC-Jz-fB2"/>
+                        <outlet property="timeLabel" destination="RIq-PE-zEB" id="F46-D4-0bc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Kenny" width="272" height="366"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
